@@ -1,7 +1,8 @@
 import { Outfit, DM_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import RouteOpening from "@/components/RouteOpening";
 
 const outfit = Outfit({
   variable: "--font-heading",
@@ -14,6 +15,7 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   display: "swap",
 });
+
 
 export const metadata = {
   title: "Percy Sparkle Cleaning Services | Professional Cleaning Services UK",
@@ -28,14 +30,31 @@ export const metadata = {
   ],
 };
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${outfit.variable} ${dmSans.variable}`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <div className="siteIntro" aria-hidden="true">
+          <div className="siteIntroContent">
+            <div className="siteIntroLogoFrame">
+              <span className="siteIntroLogo" />
+            </div>
+            <p className="siteIntroName">Percy Sparkle</p>
+            <p className="siteIntroService">Cleaning Services</p>
+          </div>
+        </div>
+
+        <div className="siteContent">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
+        <RouteOpening />
+
       </body>
+
     </html>
+
   );
 }
