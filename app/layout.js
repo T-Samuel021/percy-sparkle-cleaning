@@ -2,7 +2,6 @@ import { Outfit, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import RouteOpening from "@/components/RouteOpening";
 
 const outfit = Outfit({
   variable: "--font-heading",
@@ -35,22 +34,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${outfit.variable} ${dmSans.variable}`}>
-        <div className="siteIntro" aria-hidden="true">
-          <div className="siteIntroContent">
-            <div className="siteIntroLogoFrame">
-              <span className="siteIntroLogo" />
-            </div>
-            <p className="siteIntroName">Percy Sparkle</p>
-            <p className="siteIntroService">Cleaning Services</p>
-          </div>
-        </div>
-
-        <div className="siteContent">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
-        <RouteOpening />
+        <Navbar />
+        {children}
+        <Footer />
 
       </body>
 

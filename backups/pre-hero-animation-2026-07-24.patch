@@ -1,0 +1,200 @@
+Exit code: 0
+Wall time: 3.6 seconds
+Output:
+diff --git a/app/page.js b/app/page.js
+index 6187345..2b92885 100644
+--- a/app/page.js
++++ b/app/page.js
+@@ -10,8 +10,47 @@ const galleryRevealAnimations = [
+   { opacity: 0, y: 72, scale: 0.88, rotate: 2 },
+   { opacity: 0, x: 72, y: 34, scale: 0.9, rotate: 3 },
+   { opacity: 0, y: 64, scale: 0.9, rotate: -2 },
++  { opacity: 0, x: -72, y: 34, scale: 0.9, rotate: -3 },
++  { opacity: 0, x: 72, y: 34, scale: 0.9, rotate: 3 },
+ ];
+ 
++const heroText = {
++  hidden: {
++    opacity: 0,
++    y: 60,
++    scale: 0.95,
++    filter: "blur(14px)",
++  },
++  visible: {
++    opacity: 1,
++    y: 0,
++    scale: 1,
++    filter: "blur(0px)",
++    transition: {
++      duration: 1.2,
++      ease: [0.22, 1, 0.36, 1],
++    },
++  },
++};
++
++const heroTagline = {
++  hidden: {
++    opacity: 0,
++    y: 28,
++    filter: "blur(8px)",
++  },
++  visible: {
++    opacity: 1,
++    y: 0,
++    filter: "blur(0px)",
++    transition: {
++      duration: 0.9,
++      delay: 0.15,
++      ease: [0.22, 1, 0.36, 1],
++    },
++  },
++};
++
+ export default function Home() {
+   const reduceMotion = useReducedMotion();
+ 
+@@ -23,13 +62,23 @@ export default function Home() {
+         <section className="hero">
+           <div className="heroContent">
+ 
+-            <p className="tagline">
++            <motion.p
++              className="tagline"
++              variants={heroTagline}
++              initial={reduceMotion ? false : "hidden"}
++              animate="visible"
++            >
+               Trusted cleaning across the UK
+-            </p>
++            </motion.p>
+ 
+-            <h1 className="heroTitle">
++            <motion.h1
++              className="heroTitle"
++              variants={heroText}
++              initial={reduceMotion ? false : "hidden"}
++              animate="visible"
++            >
+               Percy Sparkle Cleaning Services
+-            </h1>
++            </motion.h1>
+ 
+             <p className="description">
+               Professional residential and commercial cleaning services,
+@@ -103,7 +152,7 @@ export default function Home() {
+               whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+               whileHover={reduceMotion ? undefined : { y: -8, scale: 1.015 }}
+               viewport={{ once: true, amount: 0.3 }}
+-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
++              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+             >
+               <div className="serviceImage">
+                 <img src="https://res.cloudinary.com/wt1k8kgj/image/upload/750775532_2710655036002460_7918627779612117160_n_izkire.webp" 
+@@ -120,7 +169,7 @@ export default function Home() {
+               whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
+               whileHover={reduceMotion ? undefined : { y: -8, scale: 1.015 }}
+               viewport={{ once: true, amount: 0.3 }}
+-              transition={{ duration: 0.76, delay: reduceMotion ? 0 : 0.1, ease: [0.22, 1, 0.36, 1] }}
++              transition={{ duration: 1.5, delay: reduceMotion ? 0 : 0.1, ease: [0.22, 1, 0.36, 1] }}
+             >
+               <div className="serviceImage">
+                 <img src="https://res.cloudinary.com/wt1k8kgj/image/upload/750797681_1706491663905419_2998312758828192447_n_ghl0kp.webp" 
+@@ -137,7 +186,7 @@ export default function Home() {
+               whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+               whileHover={reduceMotion ? undefined : { y: -8, scale: 1.015 }}
+               viewport={{ once: true, amount: 0.3 }}
+-              transition={{ duration: 0.7, delay: reduceMotion ? 0 : 0.2, ease: [0.22, 1, 0.36, 1] }}
++              transition={{ duration: 1.5, delay: reduceMotion ? 0 : 0.2, ease: [0.16, 1, 0.3, 1] }}
+             >
+               <div className="serviceImage">
+                 <img src="https://res.cloudinary.com/wt1k8kgj/image/upload/751241807_836026516145346_7836131563684118229_n_w4vrlg.webp" 
+@@ -210,7 +259,7 @@ export default function Home() {
+                 whileHover={reduceMotion ? undefined : { y: -9, scale: 1.018 }}
+                 viewport={{ once: true, amount: 0.3 }}
+                 transition={{
+-                  duration: 0.72,
++                  duration: 1.5,
+                   delay: reduceMotion ? 0 : index * 0.12,
+                   ease: [0.22, 1, 0.36, 1],
+                 }}
+@@ -259,14 +308,23 @@ export default function Home() {
+         ========================= */
+ 
+         .hero {
++          position: relative;
+           min-height: 100vh;
+           display: flex;
+           align-items: center;
+           padding: 140px 8%;
++        }
++
++        .hero::before {
++          content: "";
++          position: absolute;
++          inset: 0;
++          pointer-events: none;
++
+           background:
+-            radial-gradient(circle at 88% 20%, rgba(10, 102, 240, 0.14), transparent 32%),
+-            radial-gradient(circle at 12% 88%, rgba(245, 197, 66, 0.1), transparent 28%),
+-            #ffffff;
++            radial-gradient(circle at 50% -20%, rgba(10,102,240,.25), transparent 45%),
++            radial-gradient(circle at 20% 5%, rgba(255,255,255,.55), transparent 30%),
++            radial-gradient(circle at 80% 0%, rgba(255,255,255,.45), transparent 25%);
+         }
+ 
+ 
+@@ -297,7 +355,6 @@ export default function Home() {
+           margin: 0;
+         }
+ 
+-
+         .description {
+           max-width: 650px;
+           margin-top: 30px;
+@@ -1102,4 +1159,3 @@ export default function Home() {
+     </>
+   );
+ }
+-
+diff --git a/components/Navbar.js b/components/Navbar.js
+index 859d1f5..5bc3619 100644
+--- a/components/Navbar.js
++++ b/components/Navbar.js
+@@ -189,10 +189,14 @@ export default function Navbar() {
+           z-index: 50;
+ 
+           background:
+-            linear-gradient(105deg, #ffffff 0%, #edf6ff 58%, #fff8eb 100%);
+-          backdrop-filter: blur(15px);
++            linear-gradient(
++              to bottom,
++              rgba(255,255,255,.96) 0%,
++              rgba(238,246,255,.96) 55%,
++              rgba(212,232,255,.96) 100%
++            );         backdrop-filter: blur(15px);
+ 
+-          border-bottom: 1px solid rgba(148, 163, 184, 0.22);
++          border-bottom: 1px solid rgba(10, 102, 240, 0.18);
+ 
+         }
+ 
+@@ -447,9 +451,14 @@ export default function Navbar() {
+ 
+           .navbar {
+ 
+-            background:
+-              linear-gradient(105deg, #ffffff 0%, #e4f1ff 62%, #fff3df 100%);
++            background: linear-gradient(
++              to bottom,
++              #ffffff 0%,
++              #e4f1ff 35%,
++              #c9e2ff 100%
++            );
+ 
++            border-bottom: 1px solid rgba(10, 102, 240, 0.18);
+           }
+ 
+ 
+warning: in the working copy of 'app/page.js', LF will be replaced by CRLF the next time Git touches it
+

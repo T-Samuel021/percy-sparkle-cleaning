@@ -9,10 +9,10 @@ const logoUrl =
 
 const navigation = [
   { label: "Home", href: "/" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/aboutpage" },
+  { label: "Services", href: "/servicepage" },
+  { label: "Gallery", href: "/gallerypage" },
+  { label: "Contact", href: "/contactpage" },
 ];
 
 const navigationVariants = {

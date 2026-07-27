@@ -9,10 +9,10 @@ const logoUrl =
 
 const navigation = [
   { label: "Home", href: "/" },
-  { label: "About us", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact", href: "#contact" },
+  { label: "About us", href: "/aboutpage" },
+  { label: "Services", href: "/servicepage" },
+  { label: "Gallery", href: "/gallerypage" },
+  { label: "Contact", href: "/contactpage" },
 ];
 
 
@@ -189,10 +189,14 @@ export default function Navbar() {
           z-index: 50;
 
           background:
-            linear-gradient(105deg, #ffffff 0%, #edf6ff 58%, #fff8eb 100%);
-          backdrop-filter: blur(15px);
+            linear-gradient(
+              to bottom,
+              rgba(255,255,255,.96) 0%,
+              rgba(238,246,255,.96) 55%,
+              rgba(212,232,255,.96) 100%
+            );         backdrop-filter: blur(15px);
 
-          border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+          border-bottom: 1px solid rgba(10, 102, 240, 0.18);
 
         }
 
@@ -447,9 +451,14 @@ export default function Navbar() {
 
           .navbar {
 
-            background:
-              linear-gradient(105deg, #ffffff 0%, #e4f1ff 62%, #fff3df 100%);
+            background: linear-gradient(
+              to bottom,
+              #ffffff 0%,
+              #e4f1ff 35%,
+              #c9e2ff 100%
+            );
 
+            border-bottom: 1px solid rgba(10, 102, 240, 0.18);
           }
 
 

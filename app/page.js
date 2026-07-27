@@ -1,15 +1,22 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import {
+  Sparkles,
+  ShieldCheck,
+  CalendarDays,
+} from "lucide-react";
 
-const placeholderImage =
-  "https://res.cloudinary.com/wt1k8kgj/image/upload/v1784651760/183BF762-869E-4233-9228-EE9D3F7210E7_f6wfus.png";
+//const placeholderImage =
+//  "https://res.cloudinary.com/wt1k8kgj/image/upload/v1784651760/183BF762-869E-4233-9228-EE9D3F7210E7_f6wfus.png";
 
 const galleryRevealAnimations = [
   { opacity: 0, x: -72, y: 34, scale: 0.9, rotate: -3 },
   { opacity: 0, y: 72, scale: 0.88, rotate: 2 },
   { opacity: 0, x: 72, y: 34, scale: 0.9, rotate: 3 },
   { opacity: 0, y: 64, scale: 0.9, rotate: -2 },
+  { opacity: 0, x: -72, y: 34, scale: 0.9, rotate: -3 },
+  { opacity: 0, x: 72, y: 34, scale: 0.9, rotate: 3 },
 ];
 
 export default function Home() {
@@ -17,21 +24,30 @@ export default function Home() {
 
   return (
     <>
-        
+     <div className="homeSiteOpening" aria-hidden="true">
+      <div className="homeOpeningLogoAnchor">
+        <span className="homeOpeningLogo" />
+      </div>
+
+      <div className="homeOpeningCopy">
+        <p>Percy Sparkle</p>
+        <span>Cleaning Services</span>
+      </div>
+    </div>   
       <main className="home">
 
         <section className="hero">
           <div className="heroContent">
 
-            <p className="tagline">
+            <p className="tagline heroEntranceTagline">
               Trusted cleaning across the UK
             </p>
 
-            <h1 className="heroTitle">
+            <h1 className="heroTitle heroEntranceTitle">
               Percy Sparkle Cleaning Services
             </h1>
 
-            <p className="description">
+            <p className="description heroEntranceDescription">
               Professional residential and commercial cleaning services,
               delivered with care, consistency, and attention to detail.
             </p>
@@ -40,10 +56,66 @@ export default function Home() {
               href="https://www.neohavilah.com/"
               target="_blank"
               rel="noreferrer"
-              className="quoteButton"
+              className="quoteButton heroEntranceCta"
             >
               Request a Free Quote
             </a>
+
+            <div className="heroHighlights">
+
+              <div className="heroHighlight">
+
+                <div className="heroHighlightIcon">
+                  <Sparkles size={28} strokeWidth={2.2} />
+                </div>
+
+                <div>
+                  <h3>Excellent Service</h3>
+
+                  <p>
+                    Exceptional Cleaning Services with a Personal Touch
+                  </p>
+                </div>
+
+              </div>
+
+              
+
+              <div className="heroHighlight">
+
+                <div className="heroHighlightIcon">
+                  ✔
+                </div>
+
+                <div>
+                  <h3>Reliable Professionals</h3>
+
+                  <p>
+                    Cleaning Done Right, Every Time
+                  </p>
+                </div>
+
+              </div>
+
+             
+
+              <div className="heroHighlight">
+
+                <div className="heroHighlightIcon">
+                  <CalendarDays size={28} strokeWidth={2.2} />
+                </div>
+
+                <div>
+                  <h3>Flexible Booking</h3>
+
+                  <p>
+                    Monday – Saturday including Holidays
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
 
           </div>
         </section>
@@ -103,7 +175,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
               whileHover={reduceMotion ? undefined : { y: -8, scale: 1.015 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="serviceImage">
                 <img src="https://res.cloudinary.com/wt1k8kgj/image/upload/750775532_2710655036002460_7918627779612117160_n_izkire.webp" 
@@ -120,7 +192,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
               whileHover={reduceMotion ? undefined : { y: -8, scale: 1.015 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.76, delay: reduceMotion ? 0 : 0.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 1.5, delay: reduceMotion ? 0 : 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="serviceImage">
                 <img src="https://res.cloudinary.com/wt1k8kgj/image/upload/750797681_1706491663905419_2998312758828192447_n_ghl0kp.webp" 
@@ -137,7 +209,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
               whileHover={reduceMotion ? undefined : { y: -8, scale: 1.015 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.7, delay: reduceMotion ? 0 : 0.2, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 1.5, delay: reduceMotion ? 0 : 0.2, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="serviceImage">
                 <img src="https://res.cloudinary.com/wt1k8kgj/image/upload/751241807_836026516145346_7836131563684118229_n_w4vrlg.webp" 
@@ -210,7 +282,7 @@ export default function Home() {
                 whileHover={reduceMotion ? undefined : { y: -9, scale: 1.018 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{
-                  duration: 0.72,
+                  duration: 1.5,
                   delay: reduceMotion ? 0 : index * 0.12,
                   ease: [0.22, 1, 0.36, 1],
                 }}
@@ -259,14 +331,23 @@ export default function Home() {
         ========================= */
 
         .hero {
+          position: relative;
           min-height: 100vh;
           display: flex;
           align-items: center;
           padding: 140px 8%;
+        }
+
+        .hero::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+
           background:
-            radial-gradient(circle at 88% 20%, rgba(10, 102, 240, 0.14), transparent 32%),
-            radial-gradient(circle at 12% 88%, rgba(245, 197, 66, 0.1), transparent 28%),
-            #ffffff;
+            radial-gradient(circle at 50% -20%, rgba(10,102,240,.25), transparent 45%),
+            radial-gradient(circle at 20% 5%, rgba(255,255,255,.55), transparent 30%),
+            radial-gradient(circle at 80% 0%, rgba(255,255,255,.45), transparent 25%);
         }
 
 
@@ -297,6 +378,11 @@ export default function Home() {
           margin: 0;
         }
 
+        .heroHighlightIcon svg {
+          width: 30px;
+          height: 30px;
+          stroke-width: 2.2;
+        }
 
         .description {
           max-width: 650px;
@@ -324,6 +410,142 @@ export default function Home() {
         .quoteButton:hover {
           background: #1d4ed8;
           transform: translateY(-3px);
+        }
+
+        .heroHighlights {
+
+          margin-top: 56px;
+
+          display: grid;
+
+          grid-template-columns: repeat(3, 1fr);
+
+          width: 1200px;
+          max-width: 1250px;
+
+           background:
+            radial-gradient(circle at 50% -15%, rgba(10,102,240,.40), transparent 42%),
+            radial-gradient(circle at 15% 10%, rgba(245,197,66,.12), transparent 28%),
+            radial-gradient(circle at 85% 5%, rgba(255,255,255,.75), transparent 32%),
+            linear-gradient(
+              to bottom,
+              #dcebff 30%,
+              #b1d8ff 100%,
+              #025fd9 68%,
+              #ffecec 72%
+            );
+
+          border: 1px solid rgba(10, 102, 240, 0.08);
+
+          border-radius: 24px;
+
+          overflow: hidden;
+
+          box-shadow: 0 24px 70px rgba(15, 23, 42, 0.10);
+
+        }
+
+        .heroHighlight {
+
+          display: flex;
+          align-items: center;
+          gap: 18px;
+          padding: 30px;
+          min-height: 145px;
+          border-right: 1px solid var(--border);
+        }
+
+        .heroHighlight:last-child {
+          border-right: none;
+        }
+
+        .heroHighlightIcon {
+
+          width: 62px;
+
+          height: 62px;
+
+          border-radius: 18px;
+
+          background: var(--primary-light);
+
+          color: var(--primary);
+
+          display: flex;
+
+          align-items: center;
+
+          justify-content: center;
+
+          flex-shrink: 0;
+
+          font-size: 1.7rem;
+
+        }
+
+        .heroHighlight h3 {
+
+          margin-bottom: 8px;
+
+          font-size: 1.18rem;
+
+          line-height: 1.2;
+
+        }
+
+        .heroHighlight p {
+
+          margin: 0;
+
+          font-size: .96rem;
+
+          line-height: 1.6;
+
+        }
+
+       
+
+
+        /* Homepage-only opening sequence. It begins after the site opening
+           has cleared, without sharing classes or timing with that layout. */
+        .home .heroEntranceTagline {
+          animation: hero-tagline-arrive 0.72s cubic-bezier(0.22, 1, 0.36, 1) 2.5s both;
+          will-change: transform, opacity, filter;
+        }
+
+        .home .heroEntranceTitle {
+          animation: hero-title-arrive 1.05s cubic-bezier(0.22, 1, 0.36, 1) 2.68s both;
+          will-change: transform, opacity, filter;
+        }
+
+        .home .heroEntranceDescription {
+          animation: hero-description-arrive 0.72s cubic-bezier(0.22, 1, 0.36, 1) 3.3s both;
+          will-change: transform, opacity, filter;
+        }
+
+        .home .heroEntranceCta {
+          animation: hero-cta-arrive 0.64s cubic-bezier(0.16, 1, 0.3, 1) 3.5s both;
+          will-change: transform, opacity;
+        }
+
+        @keyframes hero-tagline-arrive {
+          from { opacity: 0; transform: translateX(-30px); filter: blur(6px); }
+          to { opacity: 1; transform: translateX(0); filter: blur(0); }
+        }
+
+        @keyframes hero-title-arrive {
+          from { opacity: 0; transform: translateY(48px) scale(0.97); filter: blur(12px); }
+          to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+        }
+
+        @keyframes hero-description-arrive {
+          from { opacity: 0; transform: translateY(20px); filter: blur(4px); }
+          to { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+
+        @keyframes hero-cta-arrive {
+          from { opacity: 0; transform: translateY(16px) scale(0.92); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
         }
 
 
@@ -882,6 +1104,106 @@ export default function Home() {
               padding: 60px 40px;
             }
 
+            .heroHighlights {
+
+              margin-top: 38px;
+
+              display: flex;
+
+              flex-direction: column;
+
+              width: 100%;
+
+              background:
+              radial-gradient(circle at 50% -15%, rgba(10,102,240,.40), transparent 42%),
+              radial-gradient(circle at 15% 10%, rgba(245,197,66,.12), transparent 28%),
+              radial-gradient(circle at 85% 5%, rgba(255,255,255,.75), transparent 32%),
+              linear-gradient(
+                to bottom,
+                #dcebff 30%,
+                #b1d8ff 100%,
+                #025fd9 68%,
+                #ffecec 72%
+              );
+
+              border-radius: 22px;
+
+              overflow: hidden;
+
+              border: 1px solid rgba(10, 102, 240, 0.08);
+
+              box-shadow: 0 18px 45px rgba(15, 23, 42, .08);
+
+            }
+
+            .heroHighlight {
+
+              display: flex;
+
+              align-items: flex-start;
+
+              gap: 16px;
+
+              padding: 22px;
+
+            }
+
+            .heroHighlightIcon {
+
+              width: 52px;
+
+              height: 52px;
+
+              border-radius: 15px;
+
+              background: var(--primary-light);
+
+              color: var(--primary);
+
+              display: flex;
+
+              justify-content: center;
+
+              align-items: center;
+
+              flex-shrink: 0;
+
+              font-size: 1.4rem;
+
+            }
+
+            .heroHighlight h3 {
+
+              margin-bottom: 6px;
+
+              font-size: 1.05rem;
+
+              line-height: 1.3;
+
+            }
+
+            .heroHighlight p {
+
+              margin: 0;
+
+              font-size: .9rem;
+
+              line-height: 1.55;
+
+            }
+
+            .heroDivider {
+
+              width: calc(100% - 44px);
+
+              height: 1px;
+
+              margin: 0 auto;
+
+              background: var(--border);
+
+            }
+
           }
 
 
@@ -1043,6 +1365,66 @@ export default function Home() {
               border-radius: 20px;
             }
 
+            /* Hero Highlights */
+
+          .heroHighlights {
+
+            margin-top: 32px;
+
+            border-radius: 20px;
+
+          }
+
+          .heroHighlight {
+
+            gap: 14px;
+
+            padding: 20px;
+
+          }
+
+          .heroHighlightIcon {
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 14px;
+
+            font-size: 1.25rem;
+
+          }
+
+          .heroHighlightIcon svg {
+
+            width: 24px;
+
+            height: 24px;
+
+          }
+
+          .heroHighlight h3 {
+
+            margin-bottom: 5px;
+
+            font-size: .98rem;
+
+          }
+
+          .heroHighlight p {
+
+            font-size: .85rem;
+
+            line-height: 1.5;
+
+          }
+
+          .heroDivider {
+
+            width: calc(100% - 40px);
+
+          }
+
           }
 
 
@@ -1082,6 +1464,68 @@ export default function Home() {
               padding: 40px 16px;
             }
 
+            /* Hero Highlights */
+
+            .heroHighlights {
+
+              margin-top: 28px;
+
+              border-radius: 18px;
+
+            }
+
+            .heroHighlight {
+
+              gap: 12px;
+
+              padding: 18px 16px;
+
+            }
+
+            .heroHighlightIcon {
+
+              width: 44px;
+
+              height: 44px;
+
+              border-radius: 12px;
+
+              font-size: 1.1rem;
+
+            }
+
+            .heroHighlightIcon svg {
+
+              width: 22px;
+
+              height: 22px;
+
+            }
+
+            .heroHighlight h3 {
+
+              margin-bottom: 4px;
+
+              font-size: .92rem;
+
+              line-height: 1.25;
+
+            }
+
+            .heroHighlight p {
+
+              font-size: .8rem;
+
+              line-height: 1.45;
+
+            }
+
+            .heroDivider {
+
+              width: calc(100% - 32px);
+
+            }
+
           }
 
 
@@ -1095,6 +1539,13 @@ export default function Home() {
               transition: none;
             }
 
+            .home .heroEntranceTagline,
+            .home .heroEntranceTitle,
+            .home .heroEntranceDescription,
+            .home .heroEntranceCta {
+              animation: none;
+            }
+
           }
 
 
@@ -1102,4 +1553,3 @@ export default function Home() {
     </>
   );
 }
-
