@@ -129,11 +129,11 @@ export default function Navbar() {
 
 
             <a
-              href="#contact"
-              className="quoteButton"
-            >
-              Get a free quote
-            </a>
+            href="/contactpage#quote-form"
+            className="quoteButton"
+          >
+            Get a free quote
+          </a>
 
 
           </div>

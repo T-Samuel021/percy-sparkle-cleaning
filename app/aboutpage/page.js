@@ -442,9 +442,11 @@ export default function AboutPage() {
             Contact us today for a free, no-obligation quote.
           </p>
 
-
-          <a href="#contact">
-            Request A Free Quote
+          <a
+            href="/contactpage#quote-form"
+            className="quoteButton"
+          >
+            Get a free quote
           </a>
 
 
@@ -1269,6 +1271,7 @@ export default function AboutPage() {
           font-family: var(--font-heading), sans-serif;
 
           font-size: clamp(2.8rem,4vw,4rem);
+          color: #ffff;
 
           line-height: 1.15;
         }

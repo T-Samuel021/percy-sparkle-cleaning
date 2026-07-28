@@ -53,13 +53,11 @@ export default function Home() {
             </p>
 
             <a
-              href="https://www.neohavilah.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="quoteButton heroEntranceCta"
-            >
-              Request a Free Quote
-            </a>
+            href="/contactpage#quote-form"
+            className="heroQuoteButton heroEntranceCta"
+          >
+            Request a Free Quote
+          </a>
 
             <div className="heroHighlights">
 
@@ -301,7 +299,7 @@ export default function Home() {
           <p className="eyebrow">Ready when you are</p>
           <h2>Let&apos;s make your space sparkle.</h2>
           <p>Tell us what you need and we&apos;ll prepare a free, no-obligation quote.</p>
-          <a href="#contact">Get a Free Quote</a>
+          <a  href="/contactpage#quote-form"  className="heroQuoteButton" >   Get a free quote </a>
         </section>
 
 
@@ -393,7 +391,7 @@ export default function Home() {
         }
 
 
-        .quoteButton {
+        .heroQuoteButton {
           display: inline-flex;
           margin-top: 40px;
           padding: 16px 34px;
@@ -407,7 +405,7 @@ export default function Home() {
         }
 
 
-        .quoteButton:hover {
+        .heroQuoteButton:hover {
           background: #1d4ed8;
           transform: translateY(-3px);
         }
@@ -1247,7 +1245,7 @@ export default function Home() {
               line-height: 1.7;
             }
 
-            .quoteButton {
+            .heroQuoteButton {
               width: 100%;
               justify-content: center;
               padding: 15px 20px;
