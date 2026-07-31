@@ -124,10 +124,14 @@ export default function Home() {
           <div className="aboutContent">
             <div className="aboutImageFrame">
               <div className="aboutImageInner">
-                <img
-                  src="https://res.cloudinary.com/wt1k8kgj/image/upload/752551029_1660678345010364_674889423543093049_n_wqlqzn.webp"
-                  alt="Percy Sparkle Cleaning team at work"
+
+                <iframe
+                  src="https://www.youtube.com/embed/GXyre9Njb-w?rel=0"
+                  title="Percy Sparkle Cleaning Services"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                 />
+
               </div>
             </div>
 
@@ -257,11 +261,11 @@ export default function Home() {
               },
               {
                 label: "Deep clean",
-                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/751241807_836026516145346_7836131563684118229_n_w4vrlg.webp",
+                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/81B1D26E-E4CB-4EA1-AAFF-2B46DC202200_uep5ju.png",
               },
               {
                 label: "Bathroom Care",
-                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/750816338_1718778549330893_2445953909247579969_n_hweaax.webp",
+                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/Cleaner_squeegeeing_glass_window_2K_202607291659_1_jwuomc.jpg",
               },
               {
                 label: "Finishing touch",
@@ -269,7 +273,7 @@ export default function Home() {
               },
               {
                 label: "Final Sparkle",
-                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/750816338_1718778549330893_2445953909247579969_n_hweaax.webp",
+                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/Kitchen_being_professionally_cle__202607291632_1_qwv6io.jpg",
               },
             ].map(({ label, image }, index) => (
               <motion.figure
@@ -580,10 +584,12 @@ export default function Home() {
 
 
         .aboutImageFrame {
-          min-height: 410px;
+          min-height: 210px;
+          height: 295px !important;
           box-sizing: border-box;
           display: flex;
           padding: 16px;
+          margin-top: 50px;
           border: 1px solid #b9d9ff;
           border-radius: 28px;
           background:
@@ -610,6 +616,16 @@ export default function Home() {
           display: block;
           border-radius: inherit;
           object-fit: cover;
+        }
+
+        .aboutImageFrame iframe {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          display: block;
+          border: none;
+          border-radius: inherit;
         }
 
 
@@ -1059,7 +1075,9 @@ export default function Home() {
             }
 
             .aboutImageFrame {
-              min-height: 420px;
+              min-height: 210px;
+              height: 120px !important;
+              margin-Top: -10px;
             }
 
             /* Services */
@@ -1263,7 +1281,8 @@ export default function Home() {
             }
 
             .aboutImageFrame {
-              min-height: 320px;
+              min-height: 199px;
+              
             }
 
             .aboutCopy h2 {

@@ -147,7 +147,7 @@ export default function AboutPage() {
               <div className="aboutHeroImageFrame">
 
                 <img
-                  src="https://res.cloudinary.com/wt1k8kgj/image/upload/752551029_1660678345010364_674889423543093049_n_wqlqzn.webp"
+                  src="https://res.cloudinary.com/wt1k8kgj/image/upload/Cleaner_squeegeeing_glass_window_2K_202607291639_1_d9wr34.jpg"
                   alt="Percy Sparkle cleaning team"
                 />
 
@@ -176,7 +176,7 @@ export default function AboutPage() {
           <div className="storyImage">
 
             <img
-              src="https://res.cloudinary.com/wt1k8kgj/image/upload/750775532_2710655036002460_7918627779612117160_n_izkire.webp"
+              src="https://res.cloudinary.com/wt1k8kgj/image/upload/Cleaner_squeegeeing_glass_window_2K_202607291726_1_syb1n8.jpg"
               alt="Professional home cleaning"
             />
 
@@ -721,7 +721,7 @@ export default function AboutPage() {
 
         .storyImage {
           position: relative;
-
+          
           padding: 16px;
 
           border-radius: 30px;
