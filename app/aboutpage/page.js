@@ -909,7 +909,7 @@ export default function AboutPage() {
 
           font-family: var(--font-heading), sans-serif;
 
-          font-size: clamp(2.rem,4vw,3.8rem);
+          font-size: clamp(2rem,4vw,3.8rem);
           line-height: 1.15;
           letter-spacing: -1px;
 
