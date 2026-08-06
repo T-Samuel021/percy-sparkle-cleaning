@@ -122,8 +122,6 @@ button {
 
 
 
-
-
 /* =========================
    ACCESSIBILITY
 ========================= */
@@ -321,6 +319,11 @@ p {
 /* =========================
    HOME OPENING
 ========================= */
+
+html,
+body{
+     overflow-x:hidden;
+}
 
 .homeSiteOpening {
   position: fixed;

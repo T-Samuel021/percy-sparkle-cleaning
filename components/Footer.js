@@ -47,13 +47,10 @@ export default function Footer() {
 
 
 
-          {/* Explore */}
+         {/* Explore */}
           <div className="column">
 
-            <h2>
-              Explore
-            </h2>
-
+            <h2>Explore</h2>
 
             <ul>
               <li>
@@ -61,19 +58,19 @@ export default function Footer() {
               </li>
 
               <li>
-                <Link href="#about">About us</Link>
+                <Link href="/aboutpage">About Us</Link>
               </li>
 
               <li>
-                <Link href="#services">Our services</Link>
+                <Link href="/servicepage">Our Services</Link>
               </li>
 
               <li>
-                <Link href="#gallery">Gallery</Link>
+                <Link href="/gallerypage">Gallery</Link>
               </li>
 
               <li>
-                <Link href="#contact">Contact us</Link>
+                <Link href="/contactpage">Contact Us</Link>
               </li>
             </ul>
 
@@ -93,33 +90,33 @@ export default function Footer() {
             <div className="contactDetails">
 
               <a href="tel:07467139733">
-                <small>
-                  Phone
-                </small>
-
-                <strong>
-                  07467 139733
-                </strong>
+                <small>Phone</small>
+                <strong>07467 139733</strong>
               </a>
-
-
 
               <a href="mailto:Percysparklecleaningservices@gmail.com">
-                <small>
-                  Email
-                </small>
-
-                <strong>
-                  Percysparklecleaningservices@gmail.com
-                </strong>
+                <small>Email</small>
+                <strong>Percysparklecleaningservices@gmail.com</strong>
               </a>
 
-
+              <a
+                href="https://maps.google.com/?q=11+Derby+Street,+Jarrow,+Northumbria,+England+NE32+3AT"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="address"
+              >
+                <small>Address</small>
+                <strong className="addressText">
+                  11 Derby Street, Jarrow, Northumbria,
+                  <br />
+                  England NE32 3AT
+                </strong>
+              </a>
 
               <a
                 href="https://x.com/PercySparkles"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="social"
               >
                 Follow @PercySparkles ↗
@@ -141,9 +138,19 @@ export default function Footer() {
           </p>
 
 
-          <p>
-            Built by <strong>Temitope Samuel</strong>
-          </p>
+         <p>
+          Built by{" "}
+          <strong>
+            <a
+              href="https://www.neohavilah.com/temitopesamuel"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="developerLink"
+            >
+              Temitope Samuel
+            </a>
+          </strong>
+        </p>
 
         </div>
 
@@ -299,8 +306,11 @@ export default function Footer() {
         }
 
 
-        .social:hover,
-        .contactDetails strong:hover {
+        .contactDetails a:hover{
+          color: #F5C542;
+        }
+
+        .contactDetails a:hover strong{
           color: #F5C542;
         }
 
@@ -325,7 +335,39 @@ export default function Footer() {
           color: white;
         }
 
+        .developerLink{
+          color: #ffffff;
+          text-decoration: none;
+          font-size: 13px;
+          font-weight: 700;
+          transition: color .3s ease;
+        }
 
+        .developerLink:hover{
+          color: #F5C542;
+        }
+
+        .address strong{
+          display: block;
+          white-space: nowrap;
+          overflow-x: auto;
+          overflow-y: hidden;
+          scrollbar-width: none;
+        }
+
+        .address strong::-webkit-scrollbar{
+          display: none;
+        }
+
+        .addressText{
+          display:block;
+        }
+
+        @media (min-width: 601px){
+          .addressText br{
+            display:none;
+          }
+        }
 
 
         /* Tablet */
