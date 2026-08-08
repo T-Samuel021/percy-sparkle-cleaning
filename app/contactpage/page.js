@@ -340,7 +340,7 @@ export default function ContactPage() {
 
                 <img
 
-                  src="https://res.cloudinary.com/wt1k8kgj/image/upload/v1785840327/Consultant_answering_customer_call_202608041140_uwvtob.jpg"
+                  src="https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1200/v1785840327/Consultant_answering_customer_call_202608041140_uwvtob.jpg"
 
                   alt="Percy Sparkle Cleaning Services"
 

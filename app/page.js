@@ -180,7 +180,7 @@ export default function Home() {
               transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="serviceImage">
-                <img src="https://res.cloudinary.com/wt1k8kgj/image/upload/750775532_2710655036002460_7918627779612117160_n_izkire.webp" 
+                <img src="https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1200/750775532_2710655036002460_7918627779612117160_n_izkire.webp" 
                      alt="Comestic cleaning" />
               </div>
               <p className="eyebrow">01 / Homes</p>
@@ -197,7 +197,7 @@ export default function Home() {
               transition={{ duration: 1.5, delay: reduceMotion ? 0 : 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="serviceImage">
-                <img src="https://res.cloudinary.com/wt1k8kgj/image/upload/750797681_1706491663905419_2998312758828192447_n_ghl0kp.webp" 
+                <img src="https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1200/750797681_1706491663905419_2998312758828192447_n_ghl0kp.webp" 
                      alt="Commercial cleaning" />
               </div>
               <p className="eyebrow">02 / Workplaces</p>
@@ -214,7 +214,7 @@ export default function Home() {
               transition={{ duration: 1.5, delay: reduceMotion ? 0 : 0.2, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="serviceImage">
-                <img src="https://res.cloudinary.com/wt1k8kgj/image/upload/751241807_836026516145346_7836131563684118229_n_w4vrlg.webp" 
+                <img src="https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1200/751241807_836026516145346_7836131563684118229_n_w4vrlg.webp" 
                      alt="Deep cleaning" />
               </div>
               <p className="eyebrow">03 / Specialist</p>
@@ -253,27 +253,27 @@ export default function Home() {
             {[
               {
                 label: "Home refresh",
-                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/751549848_1588058306373447_6870766425084193901_n_vvcbjd.webp",
+                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1200/751549848_1588058306373447_6870766425084193901_n_vvcbjd.webp",
               },
               {
                 label: "Office care",
-                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/752106890_2541855486329209_4694104466843862657_n_pr0pzb.webp",
+                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1200/752106890_2541855486329209_4694104466843862657_n_pr0pzb.webp",
               },
               {
                 label: "Deep clean",
-                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/81B1D26E-E4CB-4EA1-AAFF-2B46DC202200_uep5ju.png",
+                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1200/81B1D26E-E4CB-4EA1-AAFF-2B46DC202200_uep5ju.png",
               },
               {
                 label: "Bathroom Care",
-                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/Cleaner_squeegeeing_glass_window_2K_202607291659_1_jwuomc.jpg",
+                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1200/Cleaner_squeegeeing_glass_window_2K_202607291659_1_jwuomc.jpg",
               },
               {
                 label: "Finishing touch",
-                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/751241807_836026516145346_7836131563684118229_n_w4vrlg.webp",
+                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1200/751241807_836026516145346_7836131563684118229_n_w4vrlg.webp",
               },
               {
                 label: "Final Sparkle",
-                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/Kitchen_being_professionally_cle__202607291632_1_qwv6io.jpg",
+                image: "https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1200/Kitchen_being_professionally_cle__202607291632_1_qwv6io.jpg",
               },
             ].map(({ label, image }, index) => (
               <motion.figure

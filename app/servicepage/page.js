@@ -152,7 +152,7 @@
             <div className="servicesHeroImageFrame">
 
                 <img
-                src="https://res.cloudinary.com/wt1k8kgj/image/upload/A_luxury__ultra-realistic_professional_cleaning_SP_c77kj8.jpg"
+                src="https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1500/A_luxury__ultra-realistic_professional_cleaning_SP_c77kj8.jpg"
                 alt="Professional Cleaning Services"
                 />
 
@@ -206,7 +206,7 @@
             <div className="serviceFeatureImageFrame">
 
                 <img
-                src="https://res.cloudinary.com/wt1k8kgj/image/upload/v1785836602/Cleaners_preparing_luxury_apartment_SP_rzzljn.jpg"
+                src="https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1500/v1785836602/Cleaners_preparing_luxury_apartment_SP_rzzljn.jpg"
                 alt="Residential Cleaning"
                 />
 
@@ -440,7 +440,7 @@
         <div className="serviceFeatureImageFrame">
 
             <img
-            src="https://res.cloudinary.com/wt1k8kgj/image/upload/v1785836599/Cleaners_working_in_office_SP_qccswy.jpg"
+            src="https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1500/v1785836599/Cleaners_working_in_office_SP_qccswy.jpg"
             alt="Commercial Cleaning"
             />
 
@@ -494,7 +494,7 @@
             <div className="serviceFeatureImageFrame">
 
                 <img
-                src="https://res.cloudinary.com/wt1k8kgj/image/upload/v1785836501/Cleaners_performing_deep_clean_SP_p0pmga.jpg"
+                src="https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1500/v1785836501/Cleaners_performing_deep_clean_SP_p0pmga.jpg"
                 alt="Deep Cleaning"
                 />
 
@@ -728,7 +728,7 @@
             <div className="serviceFeatureImageFrame">
 
                 <img
-                src="https://res.cloudinary.com/wt1k8kgj/image/upload/v1785836501/Cleaners_performing_deep_clean_SP_p0pmga.jpg"
+                src="https://res.cloudinary.com/wt1k8kgj/image/upload/f_auto,q_auto:good,w_1500/v1785836501/Cleaners_performing_deep_clean_SP_p0pmga.jpg"
                 alt="End of Tenancy Cleaning"
                 />
 

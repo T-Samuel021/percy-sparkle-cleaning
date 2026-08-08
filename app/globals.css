@@ -336,7 +336,7 @@ body{
     linear-gradient(145deg, #071b3d 0%, #082a5c 100%);
   color: #ffffff;
   pointer-events: none;
-  animation: home-opening-finish 1ms linear 2.25s forwards;
+  animation: home-opening-finish 1ms linear 2.75s forwards;
 }
 
 .homeSiteOpening::before,

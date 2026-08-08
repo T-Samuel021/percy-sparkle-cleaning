@@ -1001,16 +1001,13 @@ body{
         ========================== */
 
 
-        .aboutCta{
-
-            width:100%;
-
-            margin:0 0 70px;
-
-            padding:55px 20px;
-
-            border-radius:0;
-
+        .aboutCta {
+            width: calc(100% - 28px);
+            height: 370px;
+            margin: 100px 14px 70px !important;
+            padding: 55px 20px;
+            box-sizing: border-box;
+            border-radius: 24px;
         }
 
 
