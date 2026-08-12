@@ -15,13 +15,19 @@ export default function Footer() {
 
       <div className="footerContainer">
 
-        <div className="footerGrid">
+        <div className="footerMain">
 
+          {/* =========================
+              BRAND
+          ========================= */}
 
-          {/* Brand Section */}
           <div className="brand">
 
-            <Link href="/" aria-label="Percy Sparkle Cleaning Services home">
+            <Link
+              href="/"
+              aria-label="Percy Sparkle Cleaning Services home"
+              className="logoLink"
+            >
               <img
                 src={logoUrl}
                 alt="Percy Sparkle Cleaning Services"
@@ -29,12 +35,10 @@ export default function Footer() {
               />
             </Link>
 
-
-            <p>
+            <p className="brandDescription">
               Professional residential and commercial cleaning,
               delivered with care, consistency, and attention to every detail.
             </p>
-
 
             <div className="availability">
               <span></span>
@@ -46,90 +50,145 @@ export default function Footer() {
           </div>
 
 
+          {/* =========================
+              EXPLORE
+          ========================= */}
 
-         {/* Explore */}
-          <div className="column">
+          <div className="explore">
 
             <h2>Explore</h2>
 
-            <ul>
-              <li>
-                <Link href="/">Home</Link>
-              </li>
+            <div className="exploreLinks">
 
-              <li>
-                <Link href="/aboutpage">About Us</Link>
-              </li>
+              <Link href="/">Home</Link>
 
-              <li>
-                <Link href="/servicepage">Our Services</Link>
-              </li>
+              <Link href="/aboutpage">About Us</Link>
 
-              <li>
-                <Link href="/gallerypage">Gallery</Link>
-              </li>
+              <Link href="/servicepage">Our Services</Link>
 
-              <li>
-                <Link href="/contactpage">Contact Us</Link>
-              </li>
-            </ul>
+              <Link href="/gallerypage">Gallery</Link>
 
-          </div>
-
-
-
-
-          {/* Contact */}
-          <div className="column">
-
-            <h2>
-              Contact
-            </h2>
-
-
-            <div className="contactDetails">
-
-              <a href="tel:07467139733">
-                <small>Phone</small>
-                <strong>07467 139733</strong>
-              </a>
-
-              <a href="mailto:Percysparklecleaningservices@gmail.com">
-                <small>Email</small>
-                <strong>Percysparklecleaningservices@gmail.com</strong>
-              </a>
-
-              <a
-                href="https://maps.google.com/?q=11+Derby+Street,+Jarrow,+Northumbria,+England+NE32+3AT"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="address"
-              >
-                <small>Address</small>
-                <strong className="addressText">
-                  11 Derby Street, Jarrow, Northumbria,
-                  <br />
-                  England NE32 3AT
-                </strong>
-              </a>
-
-              <a
-                href="https://x.com/PercySparkles"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social"
-              >
-                Follow @PercySparkles ↗
-              </a>
+              <Link href="/contactpage">Contact Us</Link>
 
             </div>
 
           </div>
 
 
+          {/* =========================
+              CONNECT
+          ========================= */}
+
+          <div className="connect">
+
+            <h2>Connect</h2>
+
+
+            {/* Contact Icons */}
+
+            <div className="iconRow">
+
+              {/* Phone */}
+              <a
+                href="tel:07467139733"
+                aria-label="Call Percy Sparkle Cleaning Services"
+                className="iconLink"
+              >
+                <img
+                  src="/footer-logos/phone.png"
+                  alt="Phone"
+                />
+              </a>
+
+
+              {/* Gmail */}
+              <a
+                href="mailto:Percysparklecleaningservices@gmail.com"
+                aria-label="Email Percy Sparkle Cleaning Services"
+                className="iconLink"
+              >
+                <img
+                  src="/footer-logos/gmail.png"
+                  alt="Email"
+                />
+              </a>
+
+
+              {/* Location */}
+              <a
+                href="https://maps.google.com/?q=11+Derby+Street,+Jarrow,+Northumbria,+England+NE32+3AT"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Find Percy Sparkle Cleaning Services"
+                className="iconLink"
+              >
+                <img
+                  src="/footer-logos/location.png"
+                  alt="Location"
+                />
+              </a>
+
+            </div>
+
+
+            {/* Social Icons */}
+
+            <div className="iconRow socialRow">
+
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/share/19P64Ee52N/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Percy Sparkle on Facebook"
+                className="iconLink"
+              >
+                <img
+                  src="/footer-logos/facebook.png"
+                  alt="Facebook"
+                />
+              </a>
+
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/percysparkl_?utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Percy Sparkle on Instagram"
+                className="iconLink"
+              >
+                <img
+                  src="/footer-logos/instagram.png"
+                  alt="Instagram"
+                />
+              </a>
+
+
+              {/* X */}
+              <a
+                href="https://x.com/PercySparkles"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Percy Sparkle on X"
+                className="iconLink"
+              >
+                <img
+                  src="/footer-logos/x.png"
+                  alt="X"
+                />
+              </a>
+
+            </div>
+
+          </div>
+
         </div>
 
 
+        {/* =========================
+            BOTTOM
+        ========================= */}
 
         <div className="bottom">
 
@@ -137,10 +196,8 @@ export default function Footer() {
             © {year} Percy Sparkle Cleaning Services. All rights reserved.
           </p>
 
-
-         <p>
-          Built by{" "}
-          <strong>
+          <p>
+            Built by{" "}
             <a
               href="https://www.neohavilah.com/temitopesamuel"
               target="_blank"
@@ -149,19 +206,21 @@ export default function Footer() {
             >
               Temitope Samuel
             </a>
-          </strong>
-        </p>
+          </p>
 
         </div>
-
 
       </div>
 
 
-
       <style jsx>{`
 
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
         .footer {
+          width: 100%;
           background: #071B3D;
           color: white;
           margin-top: 96px;
@@ -170,235 +229,267 @@ export default function Footer() {
 
 
         .topLine {
+          width: 100%;
           height: 4px;
           background: #F5C542;
-          width: 100%;
         }
 
 
         .footerContainer {
           width: 100%;
           max-width: 1200px;
-          margin: auto;
-          padding: 70px 6% 30px;
+          margin: 0 auto;
+          padding: 70px 6% 28px;
         }
 
 
-        .footerGrid {
+        /* =====================================================
+           MAIN FOOTER
+        ===================================================== */
+
+        .footerMain {
           display: grid;
-          grid-template-columns: 1.35fr 0.8fr 0.95fr;
-          gap: 60px;
+          grid-template-columns: 1.4fr 0.8fr 0.8fr;
+          gap: 80px;
+          align-items: start;
         }
 
 
+        /* =====================================================
+           BRAND
+        ===================================================== */
 
-        /* Brand */
+        .logoLink {
+          display: inline-block;
+          text-decoration: none;
+        }
+
 
         .logo {
-          height: 65px;
           width: auto;
+          height: 65px;
+          display: block;
           object-fit: contain;
+
           background: white;
           border-radius: 10px;
+
           padding: 5px 10px;
         }
 
 
-        .brand p {
-          margin-top: 28px;
-          max-width: 420px;
+        .brandDescription {
+          max-width: 430px;
+          margin: 28px 0 0;
+
           color: #cbd5e1;
+
           font-size: 15px;
           line-height: 1.8;
         }
 
 
         .availability {
-          margin-top: 28px;
           display: inline-flex;
           align-items: center;
+
           gap: 12px;
+
+          margin-top: 28px;
           padding: 12px 18px;
+
+          border: 1px solid rgba(255,255,255,0.10);
           border-radius: 999px;
-          border: 1px solid rgba(255,255,255,0.1);
-          background: rgba(255,255,255,0.06);
-          font-size: 14px;
+
+          background: rgba(255,255,255,0.05);
+
+          font-size: 13px;
         }
 
 
         .availability span {
-          height: 10px;
-          width: 10px;
+          width: 9px;
+          height: 9px;
+
+          flex-shrink: 0;
+
           border-radius: 50%;
+
           background: #F5C542;
         }
 
 
+        /* =====================================================
+           HEADINGS
+        ===================================================== */
 
-        /* Columns */
+        .explore h2,
+        .connect h2 {
+          margin: 0 0 25px;
 
-        .column h2 {
           color: #F5C542;
+
           font-size: 14px;
           font-weight: 800;
+
           letter-spacing: 2px;
           text-transform: uppercase;
         }
 
 
-        ul {
-          list-style: none;
-          padding: 0;
-          margin-top: 25px;
-        }
+        /* =====================================================
+           EXPLORE
+        ===================================================== */
 
-
-        li {
-          margin-bottom: 16px;
-        }
-
-
-        li a {
-          color: #cbd5e1;
-          text-decoration: none;
-          font-size: 14px;
-          font-weight: 600;
-          transition: .3s;
-        }
-
-
-        li a:hover {
-          color: white;
-        }
-
-
-
-
-        /* Contact */
-
-        .contactDetails {
-          margin-top: 25px;
+        .exploreLinks {
           display: flex;
           flex-direction: column;
-          gap: 22px;
+          gap: 16px;
         }
 
 
-        .contactDetails a {
+        .exploreLinks a {
+          width: fit-content;
+
+          color: #e2e8f0;
+
           text-decoration: none;
-          color: white;
+
+          font-size: 15px;
+          font-weight: 500;
+
+          transition:
+            color .3s ease,
+            transform .3s ease;
         }
 
 
-        small {
+        .exploreLinks a:hover {
+          color: #F5C542;
+          transform: translateX(4px);
+        }
+
+
+        /* =====================================================
+           CONNECT
+        ===================================================== */
+
+        .iconRow {
+          display: flex;
+          align-items: center;
+          gap: 18px;
+        }
+
+
+        .socialRow {
+          margin-top: 20px;
+        }
+
+
+        .iconLink {
+          width: 50px;
+          height: 50px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          border-radius: 10px;
+
+          background: rgba(255,255,255,0.045);
+
+          transition:
+            background .3s ease,
+            transform .3s ease;
+        }
+
+
+        .iconLink:hover {
+          background: rgba(245,197,66,0.12);
+          transform: translateY(-3px);
+        }
+
+
+        .iconLink img {
+          width: 22px;
+          height: 22px;
+
           display: block;
-          color: #64748b;
-          font-size: 11px;
-          font-weight: 700;
-          text-transform: uppercase;
-          margin-bottom: 5px;
-          letter-spacing: 1px;
+
+          object-fit: contain;
         }
 
 
-        .contactDetails strong {
+        /* =====================================================
+           BOTTOM
+        ===================================================== */
+
+        .bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+
+          margin-top: 58px;
+          padding-top: 25px;
+
+          border-top: 1px solid rgba(255,255,255,0.10);
+
+          color: #64748b;
+        }
+
+        .bottom p {
+          margin: 0;
           font-size: 14px;
         }
 
 
-        .contactDetails a:hover{
-          color: #F5C542;
-        }
-
-        .contactDetails a:hover strong{
-          color: #F5C542;
+        .bottom p {
+          margin: 0;
         }
 
 
-
-        /* Bottom */
-
-        .bottom {
-          margin-top: 50px;
-          padding-top: 25px;
-          border-top: 1px solid rgba(255,255,255,0.1);
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 20px;
-          color: #94a3b8;
-          font-size: 12px;
-        }
-
-
-        .bottom strong {
+        .developerLink {
           color: white;
-        }
 
-        .developerLink{
-          color: #ffffff;
           text-decoration: none;
+
           font-size: 13px;
           font-weight: 700;
+
           transition: color .3s ease;
         }
 
-        .developerLink:hover{
+
+        .developerLink:hover {
           color: #F5C542;
         }
 
-        .address strong{
-          display: block;
-          white-space: nowrap;
-          overflow-x: auto;
-          overflow-y: hidden;
-          scrollbar-width: none;
-        }
 
-        .address strong::-webkit-scrollbar{
-          display: none;
-        }
-
-        .addressText{
-          display:block;
-        }
-
-        @media (min-width: 601px){
-          .addressText br{
-            display:none;
-          }
-        }
-
-
-        /* Tablet */
+        /* =====================================================
+           TABLET
+        ===================================================== */
 
         @media (max-width: 1024px) {
 
-          .footerGrid {
-            grid-template-columns: 1fr 1fr;
-            gap: 45px;
-          }
-
-
-          .brand {
-            grid-column: span 2;
-          }
-
-
           .footerContainer {
-            padding: 60px 5% 30px;
+            padding: 60px 5% 28px;
+          }
+
+
+          .footerMain {
+            grid-template-columns: 1.2fr 0.8fr 0.8fr;
+            gap: 45px;
           }
 
         }
 
 
+        /* =====================================================
+           MOBILE
+        ===================================================== */
 
-
-
-        /* Mobile */
-
-        @media (max-width: 600px) {
-
+        @media (max-width: 700px) {
 
           .footer {
             margin-top: 70px;
@@ -406,18 +497,26 @@ export default function Footer() {
 
 
           .footerContainer {
-            padding: 50px 20px 25px;
+            padding: 50px 22px 25px;
           }
 
 
-          .footerGrid {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
+          .footerMain {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 45px 30px;
           }
 
 
-          .brand p {
+          .brand {
+            grid-column: 1 / -1;
+          }
+
+
+          .brandDescription {
+            max-width: 500px;
             font-size: 14px;
           }
 
@@ -428,26 +527,61 @@ export default function Footer() {
           }
 
 
+          .iconRow {
+            gap: 12px;
+          }
+
+
+          .iconLink {
+            width: 50px;
+            height: 50px;
+          }
+
+
+          .iconLink img {
+            width: 21px !important;
+            height: 21px !important;
+          }
+
+
           .bottom {
             flex-direction: column;
             text-align: center;
-            margin-top: 35px;
+
+            margin-top: 40px;
+
+            gap: 10px;
           }
 
+          .bottom p {
+            font-size: 12px;
+          }
+
+          .bottom p:nth-child(2) {
+            font-size: 10px;
+          }
+
+          .developerLink {
+            font-size: 11px;
+          }
 
         }
 
 
-
-
-
-        /* Small phones */
+        /* =====================================================
+           SMALL PHONES
+        ===================================================== */
 
         @media (max-width: 380px) {
 
+          .footerContainer {
+            padding-left: 18px;
+            padding-right: 18px;
+          }
+
 
           .logo {
-            height: 55px;
+            height: 58px;
           }
 
 
@@ -457,13 +591,34 @@ export default function Footer() {
           }
 
 
-          .contactDetails strong {
-            font-size: 13px;
+          .explore h2,
+          .connect h2 {
+            font-size: 12px;
           }
 
 
-        }
+          .exploreLinks a {
+            font-size: 14px;
+          }
 
+
+          .iconRow {
+            gap: 9px;
+          }
+
+
+          .iconLink {
+            width: 36px;
+            height: 36px;
+          }
+
+
+          .iconLink img {
+            width: 19px;
+            height: 19px;
+          }
+
+        }
 
       `}</style>
 
