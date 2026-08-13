@@ -41,11 +41,13 @@ export default function Footer() {
             </p>
 
             <div className="availability">
-              <span></span>
-              <strong>
-                Available 24 hours, Monday–Sunday
-              </strong>
-            </div>
+            <span></span>
+            <strong>
+              Monday - Friday: 9am – 4pm<br />
+              Saturday: 9am – 6pm<br />
+              Sunday: 10am – 5pm
+            </strong>
+          </div>
 
           </div>
 
@@ -291,7 +293,7 @@ export default function Footer() {
 
         .availability {
           display: inline-flex;
-          align-items: center;
+          align-items: flex-start;
 
           gap: 12px;
 
@@ -308,13 +310,10 @@ export default function Footer() {
 
 
         .availability span {
-          width: 9px;
-          height: 9px;
-
+          width: 4px;
+          height: 50px;
           flex-shrink: 0;
-
-          border-radius: 50%;
-
+          border-radius: 999px;
           background: #F5C542;
         }
 
@@ -554,7 +553,9 @@ export default function Footer() {
           }
 
           .bottom p {
-            font-size: 12px;
+            font-size: 11px;
+            font-weight: 700 !important;
+            color: #adadad;
           }
 
           .bottom p:nth-child(2) {
