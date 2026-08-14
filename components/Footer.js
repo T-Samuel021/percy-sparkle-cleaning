@@ -39,11 +39,11 @@ export default function Footer() {
               Professional residential and commercial cleaning,
               delivered with care, consistency, and attention to every detail.
             </p>
-
+` `
             <div className="availability">
             <span></span>
             <strong>
-              Monday - Sriday: 9am – 6pm<br />
+              Monday - Saturday: 9am – 6pm<br />
               Sunday: 10am – 4pm
             </strong>
           </div>
