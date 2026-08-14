@@ -34,7 +34,7 @@ export const metadata = {
 
     images: [
       {
-        url: "https://res.cloudinary.com/wt1k8kgj/image/upload/v1784651760/183BF762-869E-4233-9228-EE9D3F7210E7_f6wfus.png",
+        url: "https://res.cloudinary.com/wt1k8kgj/image/f_auto,q_auto,w_1000/upload/v1784651760/183BF762-869E-4233-9228-EE9D3F7210E7_f6wfus.png",
         width: 1200,
         height: 630,
         alt: "Percy Sparkle Cleaning Services",
