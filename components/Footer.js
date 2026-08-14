@@ -43,9 +43,8 @@ export default function Footer() {
             <div className="availability">
             <span></span>
             <strong>
-              Monday - Friday: 9am – 4pm<br />
-              Saturday: 9am – 6pm<br />
-              Sunday: 10am – 5pm
+              Monday - Sriday: 9am – 6pm<br />
+              Sunday: 10am – 4pm
             </strong>
           </div>
 
@@ -311,7 +310,7 @@ export default function Footer() {
 
         .availability span {
           width: 4px;
-          height: 50px;
+          height: 30px;
           flex-shrink: 0;
           border-radius: 999px;
           background: #F5C542;

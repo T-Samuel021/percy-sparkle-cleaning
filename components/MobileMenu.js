@@ -178,8 +178,10 @@ export default function MobileMenu({ open, setOpen }) {
               >
 
                 <Link
-                  href="#contact"
-                  onClick={closeMenu}
+                  href="/contactpage#quote-form"
+                  onClick={() => {
+                    setOpen(false);
+                  }}
                 >
                   Get a Free Quote
                 </Link>
@@ -502,10 +504,16 @@ export default function MobileMenu({ open, setOpen }) {
               }
 
 
-              .mobileMenuHeader img{
+              .mobileMenuHeader img {
 
-                height:38px;
-                width: 120px;
+                width: 40px;
+                height: auto;
+
+                object-fit: contain;
+
+                border-radius: 10px;
+
+                display: block;
 
               }
 
