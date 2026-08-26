@@ -10,19 +10,19 @@ export default function Footer() {
 
   return (
     <footer className="footer" id="contact">
-
       <div className="topLine"></div>
 
       <div className="footerContainer">
+        {/* =========================
+            MAIN FOOTER
+        ========================= */}
 
         <div className="footerMain">
-
           {/* =========================
               BRAND
           ========================= */}
 
           <div className="brand">
-
             <Link
               href="/"
               aria-label="Percy Sparkle Cleaning Services home"
@@ -39,28 +39,41 @@ export default function Footer() {
               Professional residential and commercial cleaning,
               delivered with care, consistency, and attention to every detail.
             </p>
-` `
+
             <div className="availability">
-            <span></span>
-            <strong>
-              Monday - Saturday: 9am – 6pm<br />
-              Sunday: 10am – 4pm
-            </strong>
+              <span></span>
+
+              <strong>
+                Monday - Saturday: 9am – 6pm
+                <br />
+                Sunday: 10am – 4pm
+              </strong>
+            </div>
           </div>
 
-          </div>
+          {/* =========================
+              OUR STORY
+          ========================= */}
 
+          <div className="story">
+            <h2>Our Story</h2>
+
+            <p>
+              We’re a local cleaning business based in Newcastle and South
+              Tyneside, focused on providing reliable, friendly and
+              detail-focused cleaning for homes and businesses across the local
+              area.
+            </p>
+          </div>
 
           {/* =========================
               EXPLORE
           ========================= */}
 
           <div className="explore">
-
             <h2>Explore</h2>
 
             <div className="exploreLinks">
-
               <Link href="/">Home</Link>
 
               <Link href="/aboutpage">About Us</Link>
@@ -70,26 +83,21 @@ export default function Footer() {
               <Link href="/gallerypage">Gallery</Link>
 
               <Link href="/contactpage">Contact Us</Link>
-
             </div>
-
           </div>
-
 
           {/* =========================
               CONNECT
           ========================= */}
 
           <div className="connect">
-
             <h2>Connect</h2>
-
 
             {/* Contact Icons */}
 
             <div className="iconRow">
-
               {/* Phone */}
+
               <a
                 href="tel:07467139733"
                 aria-label="Call Percy Sparkle Cleaning Services"
@@ -101,8 +109,8 @@ export default function Footer() {
                 />
               </a>
 
-
               {/* Gmail */}
+
               <a
                 href="mailto:Percysparklecleaningservices@gmail.com"
                 aria-label="Email Percy Sparkle Cleaning Services"
@@ -114,8 +122,8 @@ export default function Footer() {
                 />
               </a>
 
-
               {/* Location */}
+
               <a
                 href="https://maps.google.com/?q=11+Derby+Street,+Jarrow,+Northumbria,+England+NE32+3AT"
                 target="_blank"
@@ -128,15 +136,13 @@ export default function Footer() {
                   alt="Location"
                 />
               </a>
-
             </div>
-
 
             {/* Social Icons */}
 
             <div className="iconRow socialRow">
-
               {/* Facebook */}
+
               <a
                 href="https://www.facebook.com/share/19P64Ee52N/?mibextid=wwXIfr"
                 target="_blank"
@@ -150,8 +156,8 @@ export default function Footer() {
                 />
               </a>
 
-
               {/* Instagram */}
+
               <a
                 href="https://www.instagram.com/percysparkl_?utm_source=qr"
                 target="_blank"
@@ -165,8 +171,8 @@ export default function Footer() {
                 />
               </a>
 
-
               {/* X */}
+
               <a
                 href="https://x.com/PercySparkles"
                 target="_blank"
@@ -179,25 +185,26 @@ export default function Footer() {
                   alt="X"
                 />
               </a>
-
             </div>
-
           </div>
-
         </div>
-
 
         {/* =========================
             BOTTOM
         ========================= */}
 
         <div className="bottom">
+          <div className="companyInfo">
+            <p>
+              © {year} Percy Sparkle Cleaning Services Ltd. All rights reserved.
+            </p>
 
-          <p>
-            © {year} Percy Sparkle Cleaning Services. All rights reserved.
-          </p>
+            <p className="companyNumber">
+              Registered in England & Wales · Company No. 17387681
+            </p>
+          </div>
 
-          <p>
+          <p className="builtBy">
             Built by{" "}
             <a
               href="https://www.neohavilah.com/temitopesamuel"
@@ -208,11 +215,8 @@ export default function Footer() {
               Temitope Samuel
             </a>
           </p>
-
         </div>
-
       </div>
-
 
       <style jsx>{`
 
@@ -250,8 +254,15 @@ export default function Footer() {
 
         .footerMain {
           display: grid;
-          grid-template-columns: 1.4fr 0.8fr 0.8fr;
-          gap: 80px;
+
+          grid-template-columns:
+            1.4fr
+            1fr
+            0.8fr
+            0.9fr;
+
+          gap: 45px;
+
           align-items: start;
         }
 
@@ -311,8 +322,11 @@ export default function Footer() {
         .availability span {
           width: 4px;
           height: 30px;
+
           flex-shrink: 0;
+
           border-radius: 999px;
+
           background: #F5C542;
         }
 
@@ -321,6 +335,7 @@ export default function Footer() {
            HEADINGS
         ===================================================== */
 
+        .story h2,
         .explore h2,
         .connect h2 {
           margin: 0 0 25px;
@@ -336,12 +351,27 @@ export default function Footer() {
 
 
         /* =====================================================
+           OUR STORY
+        ===================================================== */
+
+        .story p {
+          margin: 0;
+
+          color: #cbd5e1;
+
+          font-size: 14px;
+          line-height: 1.8;
+        }
+
+
+        /* =====================================================
            EXPLORE
         ===================================================== */
 
         .exploreLinks {
           display: flex;
           flex-direction: column;
+
           gap: 16px;
         }
 
@@ -375,6 +405,7 @@ export default function Footer() {
         .iconRow {
           display: flex;
           align-items: center;
+
           gap: 18px;
         }
 
@@ -426,6 +457,7 @@ export default function Footer() {
           display: flex;
           align-items: center;
           justify-content: space-between;
+
           gap: 20px;
 
           margin-top: 58px;
@@ -436,14 +468,24 @@ export default function Footer() {
           color: #64748b;
         }
 
+
         .bottom p {
           margin: 0;
           font-size: 14px;
         }
 
 
-        .bottom p {
-          margin: 0;
+        .companyNumber {
+          margin-top: 6px !important;
+
+          font-size: 13px !important;
+
+          color: #64748b;
+        }
+
+
+        .builtBy {
+          white-space: nowrap;
         }
 
 
@@ -476,8 +518,34 @@ export default function Footer() {
 
 
           .footerMain {
-            grid-template-columns: 1.2fr 0.8fr 0.8fr;
-            gap: 45px;
+            grid-template-columns:
+              1.2fr
+              1fr
+              0.8fr
+              0.8fr;
+
+            gap: 30px;
+          }
+
+
+          .brandDescription {
+            font-size: 14px;
+          }
+
+
+          .story p {
+            font-size: 13px;
+          }
+
+
+          .iconRow {
+            gap: 12px;
+          }
+
+
+          .iconLink {
+            width: 46px;
+            height: 46px;
           }
 
         }
@@ -508,12 +576,19 @@ export default function Footer() {
           }
 
 
-          .brand {
+          .brand,
+          .story {
             grid-column: 1 / -1;
           }
 
 
           .brandDescription {
+            max-width: 500px;
+            font-size: 14px;
+          }
+
+
+          .story p {
             max-width: 500px;
             font-size: 14px;
           }
@@ -544,6 +619,7 @@ export default function Footer() {
 
           .bottom {
             flex-direction: column;
+
             text-align: center;
 
             margin-top: 40px;
@@ -551,15 +627,28 @@ export default function Footer() {
             gap: 10px;
           }
 
+
           .bottom p {
             font-size: 11px;
             font-weight: 700 !important;
+
             color: #adadad;
           }
 
-          .bottom p:nth-child(2) {
-            font-size: 10px;
+
+          .companyNumber {
+            margin-top: 6px !important;
+
+            font-size: 10px !important;
+
+            font-weight: 500 !important;
           }
+
+
+          .builtBy {
+            font-size: 10px !important;
+          }
+
 
           .developerLink {
             font-size: 11px;
@@ -591,6 +680,7 @@ export default function Footer() {
           }
 
 
+          .story h2,
           .explore h2,
           .connect h2 {
             font-size: 12px;
@@ -599,6 +689,11 @@ export default function Footer() {
 
           .exploreLinks a {
             font-size: 14px;
+          }
+
+
+          .story p {
+            font-size: 13px;
           }
 
 
@@ -621,7 +716,6 @@ export default function Footer() {
         }
 
       `}</style>
-
     </footer>
   );
 }

@@ -15,14 +15,10 @@ const navigation = [
   { label: "Contact", href: "/contactpage" },
 ];
 
-
 export default function Navbar() {
-
   const [open, setOpen] = useState(false);
 
-
   useEffect(() => {
-
     const { body, documentElement } = document;
     const previousBodyOverflow = body.style.overflow;
     const previousHtmlOverflow = documentElement.style.overflow;
@@ -35,13 +31,11 @@ export default function Navbar() {
       body.style.overflow = previousBodyOverflow;
       documentElement.style.overflow = previousHtmlOverflow;
     };
-
   }, [open]);
 
-
   useEffect(() => {
-
     const desktopBreakpoint = window.matchMedia("(min-width: 769px)");
+
     const closeOnDesktop = (event) => {
       if (event.matches) setOpen(false);
     };
@@ -51,23 +45,16 @@ export default function Navbar() {
     return () => {
       desktopBreakpoint.removeEventListener("change", closeOnDesktop);
     };
-
   }, []);
-
-
 
   const closeMenu = () => {
     setOpen(false);
   };
 
-
   return (
     <>
-
       <header className="navbar">
-
         <div className="navContainer">
-
 
           {/* Logo */}
 
@@ -85,61 +72,93 @@ export default function Navbar() {
           </Link>
 
 
-
-
           {/* Desktop Navigation */}
 
           <nav className="desktopNav">
-
             {navigation.map((item) => (
-
               <Link
                 href={item.href}
                 key={item.label}
               >
                 {item.label}
               </Link>
-
             ))}
-
           </nav>
-
-
-
 
 
           {/* Desktop Actions */}
 
           <div className="desktopActions">
 
-
             <a
               href="tel:07467139733"
               className="phone"
             >
 
-              <span>
-                Call us 24/7
+              {/* WhatsApp Logo */}
+
+              <span className="phoneTop">
+                <svg
+                  className="whatsappIcon"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.52 3.48A11.94 11.94 0 0 0 12.02 0
+                    C5.41 0 .03 5.38.03 11.99
+                    c0 2.11.55 4.17 1.6 5.99L0 24
+                    l6.16-1.61a11.95 11.95 0 0 0 5.85 1.53h.01
+                    c6.61 0 11.98-5.38 11.98-11.99
+                    0-3.2-1.25-6.21-3.48-8.45Z"
+                    fill="#25D366"
+                  />
+
+                  <path
+                    d="M17.48 14.41c-.3-.15-1.77-.87-2.05-.97
+                    -.27-.1-.47-.15-.67.15
+                    -.2.3-.77.97-.95 1.17
+                    -.17.2-.35.22-.65.07
+                    -.3-.15-1.27-.47-2.42-1.5
+                    -.9-.8-1.5-1.79-1.67-2.09
+                    -.17-.3-.02-.46.13-.61
+                    .13-.13.3-.35.45-.52
+                    .15-.17.2-.3.3-.5
+                    .1-.2.05-.37-.02-.52
+                    -.07-.15-.67-1.62-.92-2.22
+                    -.24-.58-.49-.5-.67-.51
+                    -.17-.01-.37-.01-.57-.01
+                    -.2 0-.52.07-.8.37
+                    -.27.3-1.04 1.02-1.04 2.49
+                    0 1.47 1.07 2.89 1.22 3.09
+                    .15.2 2.1 3.2 5.09 4.49
+                    .71.31 1.26.5 1.69.64
+                    .71.23 1.36.2 1.87.12
+                    .57-.08 1.77-.72 2.02-1.42
+                    .25-.7.25-1.3.17-1.42
+                    -.07-.12-.27-.2-.57-.35Z"
+                    fill="#ffffff"
+                  />
+                </svg>
+
+                <span>Call us 24/7</span>
               </span>
 
-              07467 139733
+              <span className="phoneNumber">
+                07467 139733
+              </span>
 
             </a>
 
 
-
             <a
-            href="/contactpage#quote-form"
-            className="quoteButton"
-          >
-            Get a free quote
-          </a>
-
+              href="/contactpage#quote-form"
+              className="quoteButton"
+            >
+              Get a free quote
+            </a>
 
           </div>
-
-
-
 
 
           {/* Mobile Hamburger Only */}
@@ -151,18 +170,13 @@ export default function Navbar() {
             aria-expanded={open}
             aria-controls="mobile-navigation"
           >
-
             <span></span>
             <span></span>
             <span></span>
-
           </button>
 
-
         </div>
-
       </header>
-
 
 
       {/* Mobile Drawer Component */}
@@ -171,10 +185,6 @@ export default function Navbar() {
         open={open}
         setOpen={setOpen}
       />
-
-
-
-
 
 
       <style jsx>{`
@@ -194,12 +204,13 @@ export default function Navbar() {
               rgba(255,255,255,.96) 0%,
               rgba(238,246,255,.96) 55%,
               rgba(212,232,255,.96) 100%
-            );         backdrop-filter: blur(15px);
+            );
+
+          backdrop-filter: blur(15px);
 
           border-bottom: 1px solid rgba(10, 102, 240, 0.18);
 
         }
-
 
 
         .navContainer {
@@ -219,9 +230,6 @@ export default function Navbar() {
         }
 
 
-
-
-
         /* Logo */
 
         .logo {
@@ -233,9 +241,11 @@ export default function Navbar() {
         .logoBox {
           width: 150px;
           height: 55px;
+
           display: flex;
           align-items: center;
           justify-content: center;
+
           overflow: hidden;
         }
 
@@ -243,11 +253,9 @@ export default function Navbar() {
         .logoBox img {
           width: 100%;
           height: 100%;
+
           object-fit: contain;
         }
-
-
-
 
 
         /* Desktop Navigation */
@@ -260,7 +268,6 @@ export default function Navbar() {
           gap: 32px;
 
         }
-
 
 
         .desktopNav a {
@@ -277,15 +284,11 @@ export default function Navbar() {
         }
 
 
-
         .desktopNav a:hover {
 
           color: #0A66F0;
 
         }
-
-
-
 
 
         /* Desktop Right Section */
@@ -301,6 +304,7 @@ export default function Navbar() {
         }
 
 
+        /* Phone */
 
         .phone {
 
@@ -311,15 +315,29 @@ export default function Navbar() {
           color: #0f172a;
 
           font-size: 14px;
+
           font-weight: 700;
+
+          display: flex;
+
+          flex-direction: column;
+
+          align-items: flex-end;
 
         }
 
 
+        /* WhatsApp + Call Us */
 
-        .phone span {
+        .phoneTop {
 
-          display: block;
+          display: flex;
+
+          align-items: center;
+
+          justify-content: flex-end;
+
+          gap: 7px;
 
           color: #94a3b8;
 
@@ -329,10 +347,44 @@ export default function Navbar() {
 
           letter-spacing: 1.5px;
 
+          line-height: 1;
+
         }
 
 
+        /* WhatsApp Icon */
 
+        .whatsappIcon {
+
+          width: 16px;
+
+          height: 16px;
+
+          display: block;
+
+          flex-shrink: 0;
+
+        }
+
+
+        .phoneNumber {
+
+          display: block;
+
+          margin-top: 4px;
+
+          color: #0f172a;
+
+          font-size: 14px;
+
+          font-weight: 700;
+
+          line-height: 1.2;
+
+        }
+
+
+        /* Quote Button */
 
         .quoteButton {
 
@@ -355,7 +407,6 @@ export default function Navbar() {
         }
 
 
-
         .quoteButton:hover {
 
           background: #0047D4;
@@ -363,9 +414,6 @@ export default function Navbar() {
           transform: translateY(-2px);
 
         }
-
-
-
 
 
         /* Hamburger */
@@ -396,7 +444,6 @@ export default function Navbar() {
         }
 
 
-
         .hamburger span {
 
           width: 20px;
@@ -410,13 +457,9 @@ export default function Navbar() {
         }
 
 
-
-
-
         /* Tablet */
 
         @media (max-width:1024px) {
-
 
           .navContainer {
 
@@ -438,11 +481,7 @@ export default function Navbar() {
 
           }
 
-
         }
-
-
-
 
 
         /* Mobile */
@@ -451,14 +490,17 @@ export default function Navbar() {
 
           .navbar {
 
-            background: linear-gradient(
-              to bottom,
-              #ffffff 0%,
-              #e4f1ff 35%,
-              #c9e2ff 100%
-            );
+            background:
+              linear-gradient(
+                to bottom,
+                #ffffff 0%,
+                #e4f1ff 35%,
+                #c9e2ff 100%
+              );
 
-            border-bottom: 1px solid rgba(10, 102, 240, 0.18);
+            border-bottom: 1px solid
+              rgba(10, 102, 240, 0.18);
+
           }
 
 
@@ -471,13 +513,11 @@ export default function Navbar() {
           }
 
 
-
           .logo img {
 
             height: 45px;
 
           }
-
 
 
           .desktopNav,
@@ -488,24 +528,18 @@ export default function Navbar() {
           }
 
 
-
           .hamburger {
 
             display: flex;
 
           }
 
-
         }
-
-
-
 
 
         /* Small phones */
 
         @media (max-width:380px) {
-
 
           .navContainer {
 
@@ -528,12 +562,9 @@ export default function Navbar() {
 
           }
 
-
         }
 
-
       `}</style>
-
 
     </>
   );
