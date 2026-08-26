@@ -141,7 +141,7 @@ export default function Navbar() {
                   />
                 </svg>
 
-                <span>Call us 24/7</span>
+                <span>Call us</span>
               </span>
 
               <span className="phoneNumber">
