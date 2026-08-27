@@ -654,6 +654,7 @@ export default function Footer() {
             font-size: 10px !important;
 
             font-weight: 500 !important;
+            text-align: center;
           }          
         }
 
