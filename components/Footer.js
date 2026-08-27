@@ -196,11 +196,15 @@ export default function Footer() {
         <div className="bottom">
           <div className="companyInfo">
             <p>
-              © {year} Percy Sparkle Cleaning Services Ltd. All rights reserved.
+              © {year} Percy Sparkle Cleaning Services. All rights reserved.
             </p>
 
             <p className="companyNumber">
               Registered in England & Wales · Company No. 17387681
+            </p>
+
+             <p className="insuranceInfo">
+              Public & Product Liability cover
             </p>
           </div>
 
@@ -483,6 +487,14 @@ export default function Footer() {
           color: #64748b;
         }
 
+        .insuranceInfo {
+          margin-top: 6px !important;
+
+          font-size: 13px !important;
+
+          color: #64748b;
+        }
+
 
         .builtBy {
           white-space: nowrap;
@@ -644,6 +656,13 @@ export default function Footer() {
             font-weight: 500 !important;
           }
 
+          .insuranceInfo {
+            margin-top: 6px !important;
+
+            font-size: 10px !important;
+
+            font-weight: 500 !important;
+          }
 
           .builtBy {
             font-size: 10px !important;
