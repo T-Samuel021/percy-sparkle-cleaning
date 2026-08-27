@@ -196,7 +196,7 @@ export default function Footer() {
         <div className="bottom">
           <div className="copyright">
             <p>
-              © {year} Percy Sparkle Cleaning Services. All rights reserved.
+              © {year} Percy Sparkle Cleaning Services Ltd. All rights reserved.
             </p>
           </div>
 
