@@ -40,7 +40,7 @@ export default function Home() {
           <div className="heroContent">
 
             <p className="tagline heroEntranceTagline">
-              Trusted cleaning across the UK
+              Trusted cleaning service across Newcastle and South Tyneside
             </p>
 
             <h1 className="heroTitle heroEntranceTitle">
@@ -140,7 +140,7 @@ export default function Home() {
               <h2>Cleaning that lets your space shine.</h2>
               <p>
                 We bring dependable, detail-focused cleaning to homes and
-                workplaces across the UK. Every service is shaped around your
+                workplaces across Newcastle and South Tyneside. Every service is shaped around your
                 space, schedule, and standards.
               </p>
 
@@ -234,9 +234,9 @@ export default function Home() {
             </div>
 
             <div className="benefitGrid">
-              <div><strong>24/7</strong><span>Flexible availability</span></div>
-              <div><strong>100%</strong><span>Care and attention</span></div>
-              <div><strong>UK</strong><span>Trusted local service</span></div>
+              <div><strong>FLEXIBLE SCHEDULING</strong><span>Appointments to suit your needs</span></div>
+              <div><strong>HUNDRED PERCENT (100%)</strong><span>Care and attention</span></div>
+              <div><strong>NEWCASTLE & SOUTH TYNESIDE</strong><span>Trusted local service</span></div>
             </div>
           </div>
         </section>
@@ -849,7 +849,7 @@ export default function Home() {
         .benefitGrid strong {
           color: #ffffff;
           font-family: var(--font-heading), sans-serif;
-          font-size: 30px;
+          font-size: 20px;
         }
 
 

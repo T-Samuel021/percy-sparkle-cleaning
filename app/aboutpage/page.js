@@ -88,7 +88,7 @@ export default function AboutPage() {
 
               <p className="heroDescription">
                 Percy Sparkle Cleaning Services provides professional
-                residential and commercial cleaning across the UK,
+                residential and commercial cleaning across Newcastle and South Tyneside,
                 bringing reliability, care, and attention to every space
                 we serve.
               </p>
@@ -97,17 +97,17 @@ export default function AboutPage() {
               <div className="aboutHeroStats">
 
                 <div>
-                  <strong>100%</strong>
+                  <strong>HUNDRED PERCENT (100%)</strong>
                   <span>Quality Focus</span>
                 </div>
 
                 <div>
-                  <strong>UK</strong>
+                  <strong>NEWCASTLE & SOUTH TYNESIDE</strong>
                   <span>Trusted Service</span>
                 </div>
 
                 <div>
-                  <strong>24/7</strong>
+                  <strong>FLEXIBLE SCHEDULING</strong>
                   <span>Flexible Support</span>
                 </div>
 
@@ -624,8 +624,8 @@ export default function AboutPage() {
 
           margin-bottom: 8px;
 
-          font-size: 2rem;
-          font-weight: 800;
+          font-size: 16px;
+          font-weight: 1000;
 
           color: var(--primary);
         }
@@ -633,7 +633,7 @@ export default function AboutPage() {
         .aboutHeroStats span {
           display: block;
 
-          font-size: 15px;
+          font-size: 13px;
           font-weight: 600;
 
           color: var(--text-secondary);
@@ -1630,7 +1630,8 @@ export default function AboutPage() {
         }
 
         .aboutHeroStats strong{
-          font-size:1.6rem;
+          font-size:17px !important;
+          font-weight: 800;
         }
 
         .aboutHeroStats span{
