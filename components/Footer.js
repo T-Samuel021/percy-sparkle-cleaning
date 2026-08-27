@@ -194,31 +194,21 @@ export default function Footer() {
         ========================= */}
 
         <div className="bottom">
-          <div className="companyInfo">
+          <div className="copyright">
             <p>
               © {year} Percy Sparkle Cleaning Services. All rights reserved.
             </p>
+          </div>
 
-            <p className="companyNumber">
+          <div className="companyInfo">
+            <p>
               Registered in the UK · Company No. 17387681
             </p>
 
-             <p className="insuranceInfo">
+            <p className="insuranceInfo">
               Public & Product Liability cover
             </p>
           </div>
-
-          <p className="builtBy">
-            Built by{" "}
-            <a
-              href="https://www.neohavilah.com/temitopesamuel"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="developerLink"
-            >
-              Temitope Samuel
-            </a>
-          </p>
         </div>
       </div>
 
@@ -473,19 +463,43 @@ export default function Footer() {
         }
 
 
+        .bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          gap: 30px;
+
+          margin-top: 58px;
+          padding-top: 25px;
+
+          border-top: 1px solid rgba(255,255,255,0.10);
+
+          color: #64748b;
+        }
+
+
+        .copyright {
+          flex: 1;
+        }
+
+
         .bottom p {
           margin: 0;
           font-size: 14px;
         }
 
 
+        .companyInfo {
+          text-align: right;
+        }
+
+
         .companyNumber {
-          margin-top: 6px !important;
-
           font-size: 13px !important;
-
           color: #64748b;
         }
+
 
         .insuranceInfo {
           margin-top: 6px !important;
@@ -495,29 +509,7 @@ export default function Footer() {
           color: #64748b;
         }
 
-
-        .builtBy {
-          white-space: nowrap;
-        }
-
-
-        .developerLink {
-          color: white;
-
-          text-decoration: none;
-
-          font-size: 13px;
-          font-weight: 700;
-
-          transition: color .3s ease;
-        }
-
-
-        .developerLink:hover {
-          color: #F5C542;
-        }
-
-
+        
         /* =====================================================
            TABLET
         ===================================================== */
@@ -662,17 +654,7 @@ export default function Footer() {
             font-size: 10px !important;
 
             font-weight: 500 !important;
-          }
-
-          .builtBy {
-            font-size: 10px !important;
-          }
-
-
-          .developerLink {
-            font-size: 11px;
-          }
-
+          }          
         }
 
 
