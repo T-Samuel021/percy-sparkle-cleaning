@@ -200,7 +200,7 @@ export default function Footer() {
             </p>
 
             <p className="companyNumber">
-              Registered in England & Wales · Company No. 17387681
+              Registered in the UK · Company No. 17387681
             </p>
 
              <p className="insuranceInfo">
