@@ -633,7 +633,7 @@ export default function Footer() {
 
 
           .bottom p {
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700 !important;
 
             color: #adadad;

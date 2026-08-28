@@ -44,7 +44,7 @@ export default function Home() {
             </p>
 
             <h1 className="heroTitle heroEntranceTitle">
-              Percy Sparkle Cleaning Services
+              Percy Sparkle Cleaning Services Ltd
             </h1>
 
             <p className="description heroEntranceDescription">
@@ -372,7 +372,7 @@ export default function Home() {
 
         .heroTitle {
           max-width: 850px;
-          font-size: clamp(3rem, 5vw, 5rem);
+          font-size: clamp(3rem, 5vw, 4.5rem);
           line-height: 1.08;
           letter-spacing: -2px;
           font-weight: 800;
