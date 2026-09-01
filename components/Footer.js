@@ -112,7 +112,7 @@ export default function Footer() {
               {/* Gmail */}
 
               <a
-                href="mailto:Percysparklecleaningservices@gmail.com"
+                href="mailto:info@percysparkle.co.uk"
                 aria-label="Email Percy Sparkle Cleaning Services"
                 className="iconLink"
               >

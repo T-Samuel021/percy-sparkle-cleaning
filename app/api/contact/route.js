@@ -16,12 +16,17 @@ export async function POST(req) {
       message,
     } = body;
 
+    /* =========================================
+       NAMECHEAP PRIVATE EMAIL TRANSPORTER
+    ========================================= */
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: process.env.EMAIL_HOST,
+      port: parseInt(process.env.EMAIL_PORT || "465", 10),
+      secure: true,
 
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD,
       },
     });
 
@@ -30,9 +35,9 @@ export async function POST(req) {
     ========================================= */
 
     const companyMailOptions = {
-      from: `"${firstName} ${lastName} via Percy Sparkle" <${process.env.GMAIL_USER}>`,
+      from: `"${firstName} ${lastName} via Percy Sparkle Cleaning Services Ltd" <${process.env.EMAIL_USER}>`,
 
-      to: "Percysparklecleaningservices@gmail.com",
+      to: process.env.EMAIL_USER,
 
       replyTo: email,
 
@@ -252,7 +257,7 @@ export async function POST(req) {
       <div class="email-header">
 
         <h1>
-          Percy Sparkle Cleaning Services
+          Percy Sparkle Cleaning Services Ltd.
         </h1>
 
         <p>
@@ -268,7 +273,7 @@ export async function POST(req) {
 
         <p class="intro">
           A new quotation request has been submitted through the
-          Percy Sparkle Cleaning Services website.
+          Percy Sparkle Cleaning Services Ltd website.
         </p>
 
 
@@ -363,7 +368,7 @@ export async function POST(req) {
         <div class="footer">
 
           This email was automatically generated from the
-          Percy Sparkle Cleaning Services website.
+          Percy Sparkle Cleaning Services Ltd website.
 
         </div>
 
@@ -384,7 +389,7 @@ export async function POST(req) {
     ========================================= */
 
     const customerMailOptions = {
-      from: `"Percy Sparkle Cleaning Services" <${process.env.GMAIL_USER}>`,
+      from: `"Percy Sparkle Cleaning Services Ltd." <${process.env.EMAIL_USER}>`,
 
       to: email,
 
@@ -638,7 +643,7 @@ export async function POST(req) {
       <div class="email-header">
 
         <h1>
-          Percy Sparkle Cleaning Services
+          Percy Sparkle Cleaning Services Ltd.
         </h1>
 
         <p>
@@ -661,7 +666,7 @@ export async function POST(req) {
 
         <p class="paragraph">
           Thank you for requesting a free cleaning quotation from
-          <strong>Percy Sparkle Cleaning Services.</strong>
+          <strong>Percy Sparkle Cleaning Services Ltd.</strong>
         </p>
 
 
@@ -780,7 +785,7 @@ export async function POST(req) {
           Kind regards,<br>
 
           <strong>
-            Percy Sparkle Cleaning Services
+            Percy Sparkle Cleaning Services Ltd.
           </strong>
 
         </div>
@@ -791,7 +796,7 @@ export async function POST(req) {
         <div class="footer">
 
           This email is a confirmation of the quote request
-          submitted through the Percy Sparkle Cleaning Services website.
+          submitted through the Percy Sparkle Cleaning Services Ltd website.
 
         </div>
 
